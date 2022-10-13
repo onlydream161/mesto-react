@@ -1,6 +1,8 @@
 import React from "react";
 function Card( {card,onCardClick} ) {
- 
+ function handleCardClick(){
+   onCardClick(card)
+ }
   return (
     <>
       <li className="places__card">
@@ -8,7 +10,7 @@ function Card( {card,onCardClick} ) {
           className="places__image-button"
           type="button"
           aria-label="открыть фото"
-          onClick={() => onCardClick(card)}
+          onClick={handleCardClick}
         >
           <img className="places__image" src={card.link} alt={card.name} />
         </button>

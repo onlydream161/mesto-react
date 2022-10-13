@@ -8,21 +8,18 @@ function PopupAvatar({ isOpen, onClose }) {
       name="popup-avatar"
       title="Обновить аватар"
       buttonText="Сохранить"
-      children={
-        <>
-          <input
-            className="popup__input   popup__input_valve_link"
-            required
-            placeholder="Ссылка на аватар"
-            type="url"
-            name="avatarlink"
-            minLength="2"
-            maxLength="200"
-          />
-          <span className="popup__error" id="avatarlink-error"></span>
-        </>
-      }
-    />
+    >
+      <input
+        className="popup__input   popup__input_valve_link"
+        required
+        placeholder="Ссылка на аватар"
+        type="url"
+        name="avatarlink"
+        minLength="2"
+        maxLength="200"
+      />
+      <span className="popup__error" id="avatarlink-error"></span>
+    </PopupWithForm>
   );
 }
 export default PopupAvatar;

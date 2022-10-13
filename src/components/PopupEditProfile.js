@@ -8,23 +8,20 @@ function PopupEditProfile({ isOpen, onClose }) {
       name="popup-profile"
       title="Редактировать профиль"
       buttonText="Сохранить"
-      children={
-        <>
-          <input
-            className="popup__input  popup__input_valve_name"
-            required
-            type="text"
-          />
-          <span className="popup__error" id="firstname-error"></span>
-          <input
-            className="popup__input   popup__input_valve_job"
-            required
-            type="text"
-          />
-          <span className="popup__error" id="job-error"></span>
-        </>
-      }
-    />
+    >
+      <input
+        className="popup__input  popup__input_valve_name"
+        required
+        type="text"
+      />
+      <span className="popup__error" id="firstname-error"></span>
+      <input
+        className="popup__input   popup__input_valve_job"
+        required
+        type="text"
+      />
+      <span className="popup__error" id="job-error"></span>
+    </PopupWithForm>
   );
 }
 

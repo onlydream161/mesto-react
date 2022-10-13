@@ -32,7 +32,7 @@ function Main({ onEditAvatar, onEditProfile, onAddPlace, handleCardClick }) {
             className="profile__editor"
             type="button"
             onClick={onEditProfile}
-          ></button>
+          />
           <p className="profile__caption">{userDescription}</p>
         </div>
 
