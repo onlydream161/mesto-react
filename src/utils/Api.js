@@ -30,8 +30,10 @@ class Api {
       method: "PATCH",
       headers: this._headers,
       body: JSON.stringify({
-        name: data.firstname,
-        about: data.job,
+        
+          name:data.name,
+          about:data.about,
+        
       }),
     }).then((res) => {
       return this._getResponseData(res);
@@ -83,6 +85,12 @@ class Api {
     }).then((res) => {
       return this._getResponseData(res);
     });
+  }
+  changeLikeCardStatus(cardId, isLiked) {
+    return fetch(`${this._address}/cards/${cardId}/likes`, {
+      method: isLiked ? "PUT" : "DELETE",
+      headers: this._headers,
+    }).then((res) => this._getResponseData(res));
   }
 }
 
